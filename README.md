@@ -21,10 +21,6 @@ NODE_ENV=development
 SSL_REJECT_UNAUTHORIZED=false
 ```
 
-**Nota sobre SSL:**
-- Para desenvolvimento: `SSL_REJECT_UNAUTHORIZED=false`
-- Para produção: `SSL_REJECT_UNAUTHORIZED=true`
-
 ### Instalação
 
 ```bash
@@ -141,22 +137,26 @@ curl -X POST http://localhost:3000/api/redmine/issues \
 └── package.json
 ```
 
-## Resolução de Problemas
+## Configuração SSL
 
-### Erro de Certificado SSL
-
-Para desenvolvimento, configure:
+### Desenvolvimento
 ```env
 SSL_REJECT_UNAUTHORIZED=false
 ```
 
-Para produção, verifique:
-- URL do Redmine correta
-- Certificado SSL válido
-- `SSL_REJECT_UNAUTHORIZED=true`
+### Produção
+```env
+SSL_REJECT_UNAUTHORIZED=true
+```
+
+**Requisitos para produção:**
+- Certificado SSL válido no servidor Redmine
+- URL HTTPS configurada corretamente
+- Validação de certificado habilitada
+
+## Resolução de Problemas
 
 ### Erro de Autenticação (401)
-
 1. Verifique as credenciais
 2. Confirme a chave de API
 3. Teste métodos de autenticação via `/api/redmine/test-connection`
