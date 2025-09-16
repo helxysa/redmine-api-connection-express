@@ -66,7 +66,6 @@ export class RedmineService {
       })
     });
 
-    // Autenticação com chave de API no cabeçalho (método mais seguro)
     client.defaults.headers['X-Redmine-API-Key'] = config.redmine.apiKey;
 
     return client;

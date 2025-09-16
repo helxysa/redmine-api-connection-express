@@ -1,6 +1,6 @@
-# API Projeto Auditor - Integração com Redmine
+# API - Integração com Redmine
 
-API para integração com Redmine utilizando diferentes métodos de autenticação.
+API para integração com Redmine utilizando API KEY.
 
 ## Configuração
 
@@ -44,8 +44,7 @@ A API suporta três métodos de autenticação:
 2. **Chave de API como Parâmetro na URL**
    - Chave de API como parâmetro na URL
 
-3. **Autenticação Básica**
-   - Login e senha do Redmine
+
 
 ## Endpoints Disponíveis
 
